@@ -1,12 +1,11 @@
 package PEP2T_4.Array_Version;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Programa_Atlas {
     int i;
-    int opc = 0;
+    String busca;
     String pais;
     String capital;
     ArrayList<String> paises = new ArrayList<String>();
@@ -15,26 +14,26 @@ public class Programa_Atlas {
 
 
     public void OpcionUno() {
-        System.out.println("\nTeclea un País:");
+        System.out.print("\n\t\t\t\t\t\t\t\t\tTeclea un País: ");
         pais = sc.next();
-        System.out.println("Teclea una Capital:");
+        System.out.print("\t\t\t\t\t\t\t\t\tTeclea una Capital: ");
         capital = sc.next();
         paises.add(pais);
         capitales.add(capital);
-        System.out.println("\t\tNueva entrada incorporada");
+        System.out.println("\t\t\t\t\t\t\t\t Nueva entrada incorporada");
     }
 
     public void OpcionDos() {
         System.out.println("\n");
         for (i = 0; i < paises.size(); i++) {
-            System.out.println("Pais: " + paises.get(i) + "\t\tCapital: " + capitales.get(i));
+            System.out.println("\t\t\t\t\t\t\t\t\tPais: " + paises.get(i) + "\t\tCapital: " + capitales.get(i));
         }
-        System.out.println("\n\t\tHay " + paises.size() + " elemento/s en el Atlas");
+        System.out.println("\n\t\t\t\t\t\t\t\t Hay " + paises.size() + " elemento/s en el Atlas");
     }
 
     public void OpcionTres() throws IllegalArgumentException {
-        String busca;
-        System.out.println("\nTeclea un País:");
+
+        System.out.print("\n\t\t\t\t\t\t\t\t\tTeclea un País: ");
         busca = sc.next();
         try {
             if (!paises.contains(busca)) {
@@ -42,17 +41,17 @@ public class Programa_Atlas {
             } else {
                 for (i = 0; i < paises.size(); i++) {
                     if (busca.equals(paises.get(i))) {
-                        System.out.println("\tCapital: " + capitales.get(i));
+                        System.out.println("\t\t\t\t\t\t\t\t\tCapital: " + capitales.get(i));
                     } } }
         }catch (IllegalArgumentException iae){
-            System.out.println("\tDe este pais no se encuentra capital");
+            System.out.println("\t\t\t\t\t\t\t\t\tDe este pais no se encuentra capital");
         }
 }
 
     public void OpcionCuatro(){
-        String busca;
+
         String mod;
-        System.out.println("\nTeclea un País: ");
+        System.out.print("\n\t\t\t\t\t\t\t\t\tTeclea un País: ");
         busca = sc.next();
 
         try {
@@ -62,18 +61,18 @@ public class Programa_Atlas {
                 for (i = 0; i < paises.size(); i++) {
                     if (busca.equals(paises.get(i))) {
                         capitales.remove(i);
-                        System.out.println("Teclea modificación de capital: ");
+                        System.out.print("\t\t\t\t\t\t\t\t\tTeclea modificación de capital: ");
                         mod = sc.next();
                         capitales.add(i,mod);
                     } } }
         }catch (IllegalArgumentException iae){
-            System.out.println("\tDe este pais no se encuentra capital");
+            System.out.println("\t\t\t\t\t\t\t\t\tDe este pais no se encuentra capital");
         }}
 
     public void OpcionCinco() {
-        String busca;
 
-        System.out.println("\nTeclea un País a eliminar: ");
+
+        System.out.print("\n\t\t\t\t\t\t\t\t  Teclea un País a eliminar: ");
         busca = sc.next();
         try {
             if (!paises.contains(busca)) {
@@ -83,17 +82,17 @@ public class Programa_Atlas {
                     if (busca.equals(paises.get(i))) {
                         paises.remove(i);
                         capitales.remove(i);
-                        System.out.println("\t\t"+ busca + " eliminada del Atlas");
+                        System.out.println("\t\t\t\t\t\t\t\t\t"+ busca + " eliminada del Atlas");
 
                     } } }
         }catch (IllegalArgumentException iae){
-            System.out.println("\tNo se encuentra el país");
+            System.out.println("\t\t\t\t\t\t\t\t\t No se encuentra el país");
         }}
 
     public void OpcionSeis() {
         paises.clear();
         capitales.clear();
-        System.out.println("\tEliminado el Atlas por completo");
+        System.out.println("\t\t\t\t\t\t\t\tEliminado el Atlas por completo");
     }
 }
 

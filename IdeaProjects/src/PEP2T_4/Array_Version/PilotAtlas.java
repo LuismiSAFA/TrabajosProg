@@ -9,7 +9,7 @@ public class PilotAtlas {
         int opc = 0;
         Programa_Atlas atlas = new Programa_Atlas();
         Scanner sc = new Scanner(System.in);
-        while (opc <= 6) {
+        while (opc < 999) {
 
             System.out.println("\n\t\t\t\t\t\t\t\t\t\tPROGRAMA ATLAS");
             System.out.println("\t\t\t\t\t\t\t\t\t=====================\n");
@@ -18,16 +18,20 @@ public class PilotAtlas {
             System.out.println("\t\t5.Eliminar una entrada del atlas        6.Eliminar el contenido completo del atlas");
             System.out.println("\t\t7.Salir ");
 
+
             do {
                 try {
-                   continua = false;
-                    System.out.print("\n\t\t\t\t\tTeclea una de las opciones: ");
+                    continua = false;
+                    System.out.print("\n\t\t\t\t\t\t\t\t  Teclea una de las opciones: ");
                     opc = sc.nextInt();
+                    if(!(1<opc && opc<=7)){
+                        System.out.println("\t\t\t\t\t\t\t\t  Debe ingresar un número entre el 1 y el 7.");
+                    }
                 } catch (InputMismatchException ex) {
-                    System.out.println("Debe ingresar obligatoriamente un número entero.");
+                    System.out.println("\t\t\t\t\t\t\t\t  Debe ingresar obligatoriamente un número entero.");
                     sc.nextLine();
                     continua = true;
-               }
+                }
             } while (continua);
 
             switch (opc) {
