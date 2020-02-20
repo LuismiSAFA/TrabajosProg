@@ -24,7 +24,7 @@ public class PilotAtlas {
                     continua = false;
                     System.out.print("\n\t\t\t\t\t\t\t\t  Teclea una de las opciones: ");
                     opc = sc.nextInt();
-                    if(!(1<opc && opc<=7)){
+                    if(!(0<opc && opc<=7)){
                         System.out.println("\t\t\t\t\t\t\t\t  Debe ingresar un número entre el 1 y el 7.");
                     }
                 } catch (InputMismatchException ex) {
