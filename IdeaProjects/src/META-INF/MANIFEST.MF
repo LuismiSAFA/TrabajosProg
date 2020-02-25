@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: PROG2T.PEP2T_2.PilotDigits
-

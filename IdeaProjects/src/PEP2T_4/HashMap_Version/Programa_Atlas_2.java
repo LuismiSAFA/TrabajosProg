@@ -41,7 +41,7 @@ public class Programa_Atlas_2 {
         }
     }
 
-    public void OpcionCuatro2(){
+    public void OpcionCuatro2() throws IllegalArgumentException{
         String mod;
         System.out.print("\n\t\t\t\t\t\t\t\t\tTeclea un País: ");
         busca = sc.next();
